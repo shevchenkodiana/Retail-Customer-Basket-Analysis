@@ -4,6 +4,25 @@ End-to-end analytics project based on the **dunnhumby – The Complete Journey**
 The project explores customer shopping behavior, basket structure, demographic differences, 
 and coupon-related patterns using **BigQuery, Python, and Tableau**.
 
+![Project Workflow](project_workflow.png)
+
+---
+
+## Table of Contents
+
+- [Dataset](#dataset)
+- [Tools & Technologies](#tools--technologies)
+- [Repository Structure](#repository-structure)
+- [Analytical Questions](#analytical-questions)
+- [Notebook Structure](#notebook-structure)
+- [Key Findings](#key-findings)
+- [Business Recommendations](#business-recommendations)
+- [Interactive Dashboard](#interactive-dashboard)
+- [How to Reproduce](#how-to-reproduce)
+- [Final Deliverables](#final-deliverables)
+
+---
+
 ## Dataset
 
 **Source:** [dunnhumby — The Complete Journey](https://www.kaggle.com/datasets/frtgnn/dunnhumby-the-complete-journey)  
@@ -24,6 +43,7 @@ and coupon-related patterns using **BigQuery, Python, and Tableau**.
 
 | Tool | Role |
 |---|---|
+| Google Cloud Storage | Raw CSV file storage and BigQuery data source |
 | BigQuery / SQL | Data cleaning, joins, aggregations, metric calculation |
 | Python (pandas, matplotlib, seaborn, plotly, scipy) | Validation, visual analysis, statistical testing |
 | Tableau | Interactive dashboard for business-facing presentation |
@@ -43,9 +63,11 @@ Retail-Customer-Basket-Analysis/
 │   └── 4_tableau_exports/       # Tables prepared for Tableau ingestion
 │
 ├── 01_retail_basket_analysis.ipynb                       # Data quality + analytical questions
-├── 02_vizualisations_and_statistical_validation.ipynb    # Hypothesis testing + vizualisations
+├── 02_visualizations_and_statistical_validation.ipynb    # Hypothesis testing + vizualisations
 │
-└── dashboard_preview.png
+├── dashboard_preview.png
+│
+└── project_workflow.png
 ```
 
 ---
@@ -78,7 +100,7 @@ Retail-Customer-Basket-Analysis/
 
 ---
 
-## Project Workflow
+## Notebook Structure
 
 ### 1. Data Quality & SQL Analysis (`01_retail_basket_analysis.ipynb`)
 - Data quality checks across all 5 tables
@@ -89,7 +111,7 @@ Retail-Customer-Basket-Analysis/
 - Coupon vs non-coupon spending comparison
 - Business recommendations
 
-### 2. Statistical Validation & Visual Analysis (`02_statistical_validation.ipynb`)
+### 2. Statistical Validation & Visual Analysis (`02_visualizations_and_statistical_validation.ipynb`)
 - Basket value distribution analysis
 - Box plots by income group
 - Correlation heatmap across household metrics
@@ -139,7 +161,7 @@ difference across income groups is statistically confirmed
 
 ## Interactive Dashboard
 
-🔗 [View Dashboard on Tableau Public]([https://public.tableau.com/views/RetailCustomerBehaviorAnalysis_17744528551900/RetailCustomerBehaviorAnalysis?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link])
+🔗 [View Dashboard on Tableau Public](https://public.tableau.com/views/RetailCustomerBehaviorAnalysis_17744528551900/RetailCustomerBehaviorAnalysis?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link)
 
 The dashboard includes:
 - KPI cards
@@ -160,13 +182,14 @@ The dashboard includes:
    - `2_views/` — create `transactions_clean` and `basket_summary`
    - `3_analytical_questions/` — run business question queries
    - `4_tableau_exports/` — prepare tables for Tableau
-2. Run the Python notebooks in order:
+2. Run the Python notebooks in order from the repository root:
    - `01_retail_basket_analysis.ipynb`
-   - `02_statistical_validation.ipynb`
+   - `02_visualizations_and_statistical_validation.ipynb`
 
 > Note: BigQuery credentials are not included in this repository.  
-> Add your own Google Cloud service account JSON file to the `/notebooks` folder 
-> and update `CREDENTIALS_FILE` in the first cell of each notebook.
+> Add your own Google Cloud service account JSON file to the 
+> **root folder** of the repository and update `CREDENTIALS_FILE` 
+> in the first cell of each notebook.
 
 ---
 
