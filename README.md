@@ -163,13 +163,18 @@ difference across income groups is statistically confirmed
 
 🔗 [View Dashboard on Tableau Public](https://public.tableau.com/views/RetailCustomerBehaviorAnalysis_17744528551900/RetailCustomerBehaviorAnalysis?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link)
 
-The dashboard includes:
-- KPI cards
-- Revenue by category
-- Basket value distribution by income group
-- Spending patterns by age group
-- Coupon vs non-coupon comparison
-- Global demographic filters
+The dashboard includes 5 KPI cards, 4 interactive charts, and 3 global filters.
+
+**KPI cards** (Total Revenue, Total Households, Coupon Households, Total Baskets, 
+Avg Basket Value) reflect all **2,500 households**.
+
+**Demographic charts** (Basket Value by Income Group, Spending by Age Group, 
+Coupon vs Non-Coupon, Loyalty Tier Revenue) are based on **801 households** 
+with available demographic data (32% of total) and respond to all three 
+global filters: Age Group, Income Group, and Coupon Household.
+
+**Revenue by Category** reflects the full dataset and is not affected 
+by the demographic filters.
 
 ![Dashboard Preview](dashboard_preview.png)
 
